@@ -1,0 +1,71 @@
+.staff {
+    position: relative;
+    margin: 10px;
+    background: #fff;
+    box-shadow: 0px 2px 10px #aaa;
+    border-radius: 5px;
+    width: 225px;
+    height: 300px;
+    padding: 10px;
+    transition: .3s ease;
+}
+.staff:hover {box-shadow: 0px 4px 10px #aaa;}
+.staff h1 {
+    text-align: center;
+    margin: 5px 0;
+}
+.staff img {
+    position: relative;
+    width: 50%;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.staff span {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+}
+.staff #interIcon {
+    cursor: pointer;
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    font-family: 'Material Icons';
+    font-size: 24pt; 
+    transform: translateX(-50%);
+    padding: 10px;
+}
+.staff #interIcon::after {
+    content: 'Interview';
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #00000090;
+    color: #eee;
+    border-radius: 3px;
+    font-size: 10pt;
+    padding: 3px;
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.staff #interIcon::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    padding-top: 100%;
+    background: #eee;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    border-radius: 50%;
+}
+.staff #interIcon:hover::after {opacity: 1;}
+.staff #interIcon:active::before {
+    transition: .3s ease;
+    transform: translate(-50%,-50%) scale(1);
+}

@@ -1,0 +1,54 @@
+ .ybNotif {
+    position: relative;
+    margin: 10px;
+    width: 400px;
+    height: 150px;
+    background: #eeeeee70;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    transition: .3s ease;
+}
+.ybNotif #close {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-family: 'Material Icons';
+    cursor: pointer;
+    padding: 3px;
+}
+.ybNotif #close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%) scale(0);
+    background: #aaaaaa60;
+    border-radius: 50%;
+}
+.ybNotif #close:active::after {
+    transition: transform .2s ease;
+    transform: translate(-50%,-50%) scale(1);
+}
+.ybNotif:hover {background: #eee;}
+.ybNotif a { 
+    height: 90%;
+    display: inline-block;
+    margin: 10px;
+}
+.ybNotif a img {
+    height: 90%;
+    display: inline-block;
+    margin: 10px;
+}
+.ybNotif p {
+    font-family: "Open Sans",sans-serif;
+    display: inline-block;
+    width: 70%;
+}

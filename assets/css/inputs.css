@@ -1,0 +1,13 @@
+input[type="text"], input[type="password"] {
+    outline: 0;
+    font-family: 'Montserrat',sans-serif;
+    padding: 10px;
+    border: 2px solid #eee;
+    border-radius: 3px;
+    display: block;
+    transition: .3s ease;
+}
+#inputs input {margin: 10px;}
+input[type="text"]:focus, input[type="password"]:focus {border-color: #aaa;}
+input[type="text"][disabled] {cursor: text;}
+input[type="text"][disabled]:active {border-color: #dd2a2a;}

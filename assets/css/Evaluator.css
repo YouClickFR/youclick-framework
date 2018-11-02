@@ -1,0 +1,23 @@
+div#evaluatorContainer {
+    width: 80%;
+    margin: auto;
+    margin-top: 300px;
+}
+div#evaluatorContainer input, div#evaluatorContainer button {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    padding: 0;
+}
+div#evaluatorContainer input {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-color: 0;
+    font-size: 12pt;
+}
+div#evaluatorContainer button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    font-size: 14pt;
+}

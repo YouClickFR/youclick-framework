@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" /> 
+        <title>Framework YouClick</title>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script  src="assets/js/FWnav.js"></script>
+        <script  src="assets/js/youclickHeaderParallax.js"></script>
+        <script  src="assets/js/interviewEvents.js"></script>
+        <link href="assets/css/linker.css" rel="stylesheet" />
+    </head>
+    <body>
+        <elm id="sampleTexts">
+            <h1>Title Montserrat:400</h1>
+            <h2>Title lv2 Montserrat:300</h2>
+            <p>Open sans : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim quis augue ac sagittis. In iaculis rutrum eros eu tincidunt. Donec a metus interdum, pharetra nunc in, elementum dui. Nam nisl ipsum, suscipit sit amet neque nec, sagittis condimentum dui. Vestibulum sagittis finibus fermentum. Suspendisse porttitor ullamcorper egestas. Nam volutpat ac augue sed semper. Maecenas sed elementum justo, in congue massa. Aenean sed sollicitudin augue. Aliquam tincidunt tempus urna, ut dignissim odio tincidunt eget. Integer sit amet lacus id libero rhoncus egestas. Suspendisse potenti. Phasellus vitae diam bibendum, placerat enim vitae, condimentum nisl. Integer viverra sapien tincidunt suscipit feugiat. Aenean blandit imperdiet facilisis. In auctor tellus ut neque placerat consectetur.</p>
+        </elm>
+        <elm id="buttons">
+            <button>small button</button><br />
+            <button style="font-size: 12pt">medium button</button><br />
+            <button style="font-size: 24pt">large button</button><br />
+            <button style="font-size: 48pt">X-large button</button><br />
+        </elm>
+        <elm id="inputs">
+            <input type="text" placeholder="text">
+            <input type="password" placeholder="password"><br />
+            <input type="text" disabled placeholder="disabled"><br />
+            <input type="text" placeholder="medium input" style="font-size: 12pt"><br />
+            <input type="text" placeholder="large input" style="font-size: 24pt"><br />
+            <input type="text" placeholder="X-large input" style="font-size: 48pt"><br />
+        </elm>
+        <elm id="Evaluator">
+        <div id="evaluatorContainer">
+        <input type="text" placeholder="https://youtu.be/UrlRandom1sEsX">
+        <button>Évaluer le niveau de putaclic</button>
+        </div>
+        </elm>
+        <elm id="evalError">
+            <div id="error">Veuillez entrer l'URL d'une vidéo !</div>
+        </elm>
+        <elm id="youblockNotif">
+            <button onclick="$('#youblockNotif .ybNotif').fadeIn(0);">Reload notif</button>
+            <div class="ybNotif">
+                <div id="close" onclick="$(this).parent().fadeOut(500);">close</div>
+                <a href="https://youclick.fr/extern?youblock" target="_blank"><img src="assets/img/logoyb.png" alt="YouBlock" /></a>
+                <p>Hey ! Il semble que tu n'aies pas l'extension YouBlock, elle permet de bloquer le putaclic sur YouTube ! Tu peux la télécharger en cliquant sur le logo.</p>
+            </div>
+        </elm>
+        <elm id="youclickHeader">
+            <div id="header">
+            <img src="assets/img/logo_hd.png" alt="YouClick" id="logo"/>
+            </div>
+            <div id="scroller"></div>
+        </elm>
+        <elm id="topSideMenu">
+            <div id="topMenu">
+                    <a href="#">Accueil</a>
+                    <a href="#">Evaluateur</a>
+                    <a href="#">Top</a>
+                    <a href="#">Succès</a>
+                    <a style="float:right;" href="#">A propos</a>
+                    <a style="float:right;" href="#">KévinGamer</a>
+            </div>
+        </elm>
+        <elm id="botFooter">
+        <footer id="footer">
+
+    <div id="respLanguageSelection">
+	<ul>
+	<li><a href="?lang=fr"><img src="https://youclick.fr/assets/img/fr.png" alt="FR" width="25"></a></li>
+	<li><a href="?lang=en"><img src="https://youclick.fr/assets/img/en.png" alt="EN" width="25"></a></li>
+	<li><a href="?lang=de"><img src="https://youclick.fr/assets/img/de.png" alt="DE" width="25"></a></li>
+	<li><a href="?lang=es"><img src="https://youclick.fr/assets/img/es.png" alt="ES" width="25"></a></li>
+	<li><a href="?lang=ro"><img src="https://youclick.fr/assets/img/ro.png" alt="RO" width="25"></a></li>
+	</ul>
+	</div>
+	<div id="flex">
+	<div id="language" class="boxFlex">
+	<h2>Changer de langue</h2>
+	<ul id="languageSelection">
+	<li><a href="?lang=fr"><img src="https://youclick.fr/assets/img/fr.png" alt="FR" width="25">Français</a></li>
+	<li><a href="?lang=en"><img src="https://youclick.fr/assets/img/en.png" alt="EN" width="25/">English</a></li>
+	<li><a href="?lang=de"><img src="https://youclick.fr/assets/img/de.png" alt="DE" width="25/">Deutsch</a></li>
+	<li><a href="?lang=es"><img src="https://youclick.fr/assets/img/es.png" alt="ES" width="25/">Español</a></li>
+	<li><a href="?lang=ro"><img src="https://youclick.fr/assets/img/ro.png" alt="RO" width="25">Românesc</a></li>
+</ul>	
+</div>
+<br>
+<div id="links" class="boxFlex">
+	<h2>YouClick</h2>
+	<ul>
+	<li><a style="color:white;" href="https://youclick.fr/api">API</a></li>
+	<li><a style="color:white;" href="https://youclick.fr/contact">Nous contacter</a></li>
+	<li><a style="color:white;" href="https://youclick.fr/translator">Translator</a></li>
+	<li><a style="color:white;" href="https://youclick.fr/about#Enrollment">Recrutement</a></li>
+	<li><a style="color:white;" href="https://youclick.fr/mentions_legales">Conditions Générales d'Utilisation</a></li>
+	</ul>
+</div>
+<div id="social" class="boxFlex">
+	<h2>Réseaux Sociaux</h2>
+	<ul>
+		<li id="fb"><a href="https://youclick.fr/extern?facebook" target="_blank"><img width="25" src="https://youclick.fr/beta/assets/img/facebook_btn.png"></a></li>
+		<li id="tw"><a href="https://youclick.fr/extern?twitter" target="_blank"><img width="25" src="https://youclick.fr/beta/assets/img/twitter_btn.png"></a></li>
+		<li id="ds"><a href="https://youclick.fr/extern?discord" target="_blank"><img width="25" src="https://youclick.fr/beta/assets/img/discord_btn.png"></a></li>
+		<li id="yt"><a href="https://youclick.fr/extern?youtube" target="_blank"><img width="25" src="https://youclick.fr/beta/assets/img/yt_btn2.png"></a></li>
+	</ul>
+</div>
+</div>
+<div id="footerText"><p style="display:inline-block;width:80%;padding: 18px;">YouClick est un site développé par Ozachi et SkywalkerFR et n'est PAS affilié à YouTube. © YouClick 2017-2018&nbsp;</p></div>
+
+</footer>
+        </elm>
+        <elm id="siteHome">
+           <div id="topMenu">
+                    <a href="#">Accueil</a>
+                    <a href="#">Evaluateur</a>
+                    <a href="#">Top</a>
+                    <a href="#">Succès</a>
+                    <a style="float:right;" href="#">A propos</a>
+                    <a style="float:right;" href="#">KévinGamer</a>
+            </div>
+            <
+        </elm>
+        <elm id="languageMenu">
+            <div id="langMenu">
+            <ul>
+            <li id="selected"><a href="#"><img src="https://youclick.fr/assets/img/fr.png" alt="FR" width="35"></a></li>
+            <li><a href="#"><img src="https://youclick.fr/assets/img/en.png" alt="EN" width="35"></a></li>
+            <li><a href="#"><img src="https://youclick.fr/assets/img/de.png" alt="DE" width="35"></a></li>
+            <li><a href="#"><img src="https://youclick.fr/assets/img/es.png" alt="ES" width="35"></a></li>
+            <li><a href="#"><img src="https://youclick.fr/assets/img/ro.png" alt="RO" width="35"></a></li>
+            </ul>
+            </div>
+        </elm>
+        <elm id="staffMember">
+            <div class="staff">
+                <img src="assets/img/PUDDING.jpg" alt="Pudding" />
+                <h1>Hickacou</h1>
+                <span>Dieu</span>
+                <span>Développeur web</span>
+                <div id="interIcon">forum</div>
+            </div>
+        </elm>
+        <elm id="interview">
+            <button onclick="$('#example').addClass('active')">trigger</button>
+            <div class="interviewContainer" id="example">
+                <div id="close" onclick="$(this).parent().removeClass('active')">close</div>
+                <img src="assets/img/PUDDING.jpg" alt="avatar">
+                <h1 class="fr">Hickacou</h1>
+                <div id="interviewText">
+                    <h2>Question</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec lacinia erat. Fusce vel facilisis nunc. Nunc sit amet lectus dui. Pellentesque ut mauris odio. Sed feugiat commodo odio ut imperdiet. Aenean eu magna sed leo ornare scelerisque sit amet a quam. Pellentesque tempor dui pulvinar, ornare dolor at, euismod dui.</p>
+                    <h2>Question</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec lacinia erat. Fusce vel facilisis nunc. Nunc sit amet lectus dui. Pellentesque ut mauris odio. Sed feugiat commodo odio ut imperdiet. Aenean eu magna sed leo ornare scelerisque sit amet a quam. Pellentesque tempor dui pulvinar, ornare dolor at, euismod dui.</p>
+                    <h2>Question</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec lacinia erat. Fusce vel facilisis nunc. Nunc sit amet lectus dui. Pellentesque ut mauris odio. Sed feugiat commodo odio ut imperdiet. Aenean eu magna sed leo ornare scelerisque sit amet a quam. Pellentesque tempor dui pulvinar, ornare dolor at, euismod dui.</p>
+                    <h2>Question</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec lacinia erat. Fusce vel facilisis nunc. Nunc sit amet lectus dui. Pellentesque ut mauris odio. Sed feugiat commodo odio ut imperdiet. Aenean eu magna sed leo ornare scelerisque sit amet a quam. Pellentesque tempor dui pulvinar, ornare dolor at, euismod dui.</p>
+                </div>
+            </div>
+        </elm>
+        <elm id="userPage">
+            <div class="userPageContainer">
+                <div id="header">
+                    <img src="assets/img/PUDDING.jpg" alt="Avatar" id="avatar">
+                    <h1 id="pseudo">Hickacou</h1>
+                    <h2 id="role">Développeur Front-End</h2>
+                </div>
+                <div id="bio">
+                    Stalk j'aime ça.( ͡° ͜ʖ ͡°)
+                </div>
+                <div id="socials">
+                    <div id="tw"><i class="fab fa-twitter"></i><a href="https://twitter.com/Hickacou" target="_blank" text="@Hickacou">@Hickacou</a></div>
+                    <div id="discord"><i class="fab fa-discord"></i>Hickacou#3151</div>
+                </div>
+                </div>
+            </div>
+        </elm>
+    </body>
+</html>

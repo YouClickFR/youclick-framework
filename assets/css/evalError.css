@@ -1,0 +1,26 @@
+#evalError #error {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    font-family: "Open Sans",sans-serif;
+    background: #333333;
+    border-radius: 10em;
+    padding: 10px;
+    font-size: 8pt;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    transition: .3s ease;
+}
+#evalError #error:after {
+    content: '';
+    border: 10px solid transparent;
+    border-top-color: #333;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -19px;
+    left: 50%;
+    transform: translateX(-50%);
+}
